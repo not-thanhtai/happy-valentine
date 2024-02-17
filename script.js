@@ -1,7 +1,7 @@
 "use strict";
 
-const btn = document.querySelector(".btn");
-const button = document.querySelector(".button");
+const btn = document.querySelector(".btn--round");
+const button = document.querySelector(".btn--next");
 const container = document.querySelector(".container");
 const loading = document.querySelector(".wrapper");
 const background = document.querySelector("body");
@@ -54,10 +54,8 @@ btn.addEventListener("click", function () {
 
   setTimeout(function () {
     btn.classList.add("hidden");
-    waviy.classList.add("hidden");
     setTimeout(() => {
       btn.remove();
-      waviy.remove();
     }, 500);
   }, 100);
 

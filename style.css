@@ -29,13 +29,14 @@ body {
   opacity: 1;
 }
 
-.valentines {
+.envelope--container {
   position: relative;
   cursor: pointer;
   animation: up 2s linear infinite;
 }
 
-.valentines::before {
+.envelope--container::before {
+  /* shadow */
   content: "";
   position: absolute;
   width: 210px;
@@ -45,10 +46,6 @@ body {
   top: 300px;
   left: 100px;
   animation: scale 2s linear infinite;
-}
-
-.valentines .letter.cancel-hover {
-  transform: none !important;
 }
 
 .envelope {
@@ -133,7 +130,7 @@ body {
 /* -------------------------- CONTAINER END -------------------------- */
 
 /* -------------------------- NEXT BUTTON START -------------------------- */
-.button {
+.btn--next {
   --font-color: #323232;
   --bg-color: #fff;
   --main-color: #323232;
@@ -151,7 +148,7 @@ body {
   display: none;
 }
 
-.button:active {
+.btn--next:active {
   box-shadow: 0px 0px var(--main-color);
   transform: translate(3px, 3px);
 }
@@ -160,7 +157,7 @@ body {
   transform: translateY(-100px);
 }
 
-.btn:active .btn--front {
+.btn--round:active .btn--round--front {
   transform: translateY(0%);
   box-shadow: 0 0;
 }
@@ -168,7 +165,7 @@ body {
 /* -------------------------- NEXT BUTTON END -------------------------- */
 
 /* -------------------------- ROUND BUTTON START -------------------------- */
-.btn {
+.btn--round {
   --primary: 76, 185, 231;
   --secondary: 15, 33, 103;
   width: 200px;
@@ -184,7 +181,7 @@ body {
   z-index: 4;
 }
 
-.btn .btn--back {
+.btn--round .btn--round--back {
   background: rgb(var(--secondary));
   border-radius: 100%;
   position: absolute;
@@ -194,7 +191,7 @@ body {
   height: 100%;
 }
 
-.btn .btn--front {
+.btn--round .btn--round--front {
   background: linear-gradient(
     0deg,
     rgba(var(--primary), 0.6) 20%,
